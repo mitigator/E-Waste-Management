@@ -1,7 +1,4 @@
 import { useState } from "react";
-import StatsCard from "./StatsCard";
-import RecentActivity from "./RecentActivity";
-import EarningsChart from "./EarningsChart";
 import {
   ArrowUp,
   ArrowDown,
@@ -9,9 +6,16 @@ import {
   Users,
   Truck,
   DollarSign,
+  Clock,
+  CheckCircle,
+  AlertCircle,
+  Package,
 } from "lucide-react";
+import StatsCard from "../components/dashboard/StatsCard";
+import RecentActivity from "../components/dashboard/RecentActivity";
+import EarningsChart from "../components/dashboard/EarningsChart";
 
-const DashboardOverview = () => {
+const Home = () => {
   // Mock data
   const stats = [
     {
@@ -75,6 +79,37 @@ const DashboardOverview = () => {
     },
   ];
 
+  const recentBookings = [
+    {
+      id: "BK-001",
+      customer: "John Smith",
+      pickup: "123 Main St",
+      scheduled: "Today, 10:00 AM",
+      status: "pending",
+    },
+    {
+      id: "BK-002",
+      customer: "Sarah Johnson",
+      pickup: "456 Oak Ave",
+      scheduled: "Today, 2:30 PM",
+      status: "assigned",
+    },
+    {
+      id: "BK-003",
+      customer: "Mike Williams",
+      pickup: "789 Pine Rd",
+      scheduled: "Tomorrow, 9:00 AM",
+      status: "pending",
+    },
+    {
+      id: "BK-004",
+      customer: "Emma Brown",
+      pickup: "321 Elm St",
+      scheduled: "Tomorrow, 11:45 AM",
+      status: "completed",
+    },
+  ];
+
   const earningsData = [
     { name: "Jan", earnings: 4000 },
     { name: "Feb", earnings: 3000 },
@@ -83,6 +118,13 @@ const DashboardOverview = () => {
     { name: "May", earnings: 1890 },
     { name: "Jun", earnings: 2390 },
   ];
+
+  const statusIcons = {
+    completed: <CheckCircle className="h-5 w-5 text-green-500" />,
+    pending: <Clock className="h-5 w-5 text-yellow-500" />,
+    "in-progress": <AlertCircle className="h-5 w-5 text-blue-500" />,
+    assigned: <Package className="h-5 w-5 text-purple-500" />,
+  };
 
   return (
     <div className="container mx-auto px-4 py-6">
@@ -157,28 +199,40 @@ const DashboardOverview = () => {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {[1, 2, 3, 4, 5].map((item) => (
-                  <tr key={item}>
+                {recentBookings.map((booking) => (
+                  <tr key={booking.id}>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      #{item}245
+                      #{booking.id}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      Customer {item}
+                      {booking.customer}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      123 Main St
+                      {booking.pickup}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      Today, 2:00 PM
+                      {booking.scheduled}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      {item % 3 === 0 ? (
-                        <span className="badge-completed">Completed</span>
-                      ) : item % 2 === 0 ? (
-                        <span className="badge-assigned">Assigned</span>
-                      ) : (
-                        <span className="badge-pending">Pending</span>
-                      )}
+                      <div className="flex items-center">
+                        <div className="flex-shrink-0 mr-2">
+                          {statusIcons[booking.status]}
+                        </div>
+                        <span
+                          className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                            booking.status === "completed"
+                              ? "bg-green-100 text-green-800"
+                              : booking.status === "pending"
+                              ? "bg-yellow-100 text-yellow-800"
+                              : booking.status === "assigned"
+                              ? "bg-blue-100 text-blue-800"
+                              : "bg-gray-100 text-gray-800"
+                          }`}
+                        >
+                          {booking.status.charAt(0).toUpperCase() +
+                            booking.status.slice(1)}
+                        </span>
+                      </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       <button className="text-blue-600 hover:text-blue-900">
@@ -201,4 +255,4 @@ const DashboardOverview = () => {
   );
 };
 
-export default DashboardOverview;
+export default Home;
