@@ -16,14 +16,16 @@ import BookPickup from "./pages/BookPickup";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import SupportPage from "./pages/SupportPage";
+import ActualHome from "./pages/ActualHome";
 
 
 function App() {
   return (
     <Router>
-      <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
+          
+          <Route path="/admin" element={<Home />} />
+          
 
           {/* Bookings Routes */}
           <Route path="/bookings" element={<Bookings />} />
@@ -40,15 +42,16 @@ function App() {
 
           {/* Earnings Route */}
           <Route path="/earnings" element={<Earnings />} />
-          <Route path="/user" element={<UserDashboard />} />
+
+        <Route path="/" element={<ActualHome />} />
+        <Route path="/user" element={<UserDashboard />} />
           <Route path="/booking-confirmation" element={<BookingConfirmation />} />
           <Route path="/booking-history" element={<BookingHistory />} />
           <Route path="/book-pickup" element={<BookPickup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/support" element={<SupportPage />} />
-        </Routes>
-      </Layout>
+      </Routes>
     </Router>
   );
 }

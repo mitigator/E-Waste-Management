@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Calendar, Plus, Search, Filter } from "lucide-react";
 import BookingCard from "../components/bookings/BookingCard";
 import EmptyState from "../components/common/EmptyState";
+import Layout from "../components/common/Layout";
 
 const Bookings = () => {
   const [filter, setFilter] = useState("all");
@@ -73,7 +74,8 @@ const Bookings = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-6">
+    <Layout>
+       <div className="container mx-auto px-4 py-6">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
         <h1 className="text-2xl font-bold text-gray-800">
           Bookings Management
@@ -131,6 +133,8 @@ const Bookings = () => {
         />
       )}
     </div>
+    </Layout>
+   
   );
 };
 

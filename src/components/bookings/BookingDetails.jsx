@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import BookingStatusBadge from "../common/BookingStatusBadge";
 import Modal from "../common/Modal";
+import Layout from "../common/Layout";
 
 const BookingDetails = ({ bookingId, onClose }) => {
   // Mock data - in a real app this would come from an API
@@ -57,7 +58,8 @@ const BookingDetails = ({ bookingId, onClose }) => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-6">
+   <Layot>
+     <div className="container mx-auto px-4 py-6">
       <div className="card">
         <div className="p-6">
           {/* Header */}
@@ -455,6 +457,7 @@ const BookingDetails = ({ bookingId, onClose }) => {
         </div>
       </Modal>
     </div>
+   </Layot>
   );
 };
 

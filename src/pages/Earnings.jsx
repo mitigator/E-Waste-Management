@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { DollarSign, Download, Calendar, Filter } from "lucide-react";
 import EarningsChart from "../components/earnings/EarningsChart";
+import Layout from "../components/common/Layout";
 
 const Earnings = () => {
   const [timeRange, setTimeRange] = useState("month");
@@ -34,7 +35,8 @@ const Earnings = () => {
   const years = [2023, 2022, 2021];
 
   return (
-    <div className="container mx-auto px-4 py-6">
+    <Layout>
+      <div className="container mx-auto px-4 py-6">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
         <h1 className="text-2xl font-bold text-gray-800">Earnings Summary</h1>
         <button className="btn btn-primary mt-4 md:mt-0">
@@ -247,6 +249,7 @@ const Earnings = () => {
         </div>
       </div>
     </div>
+    </Layout>
   );
 };
 

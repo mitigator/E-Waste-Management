@@ -40,6 +40,7 @@ const BookingHistory = () => {
       wasteType: 'Other'
     }
   ];
+  
 
   const statusIcons = {
     completed: <CheckCircle className="h-4 w-4 text-green-500" />,

@@ -6,6 +6,7 @@ import { Truck, Clock, User, Phone, MapPin } from "lucide-react";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
+import Layout from "../common/Layout";
 
 // Fix leaflet's default icon path issue
 delete L.Icon.Default.prototype._getIconUrl;
@@ -96,7 +97,8 @@ const LiveTracking = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-6">
+    <Layout>
+      <div className="container mx-auto px-4 py-6">
       <h1 className="text-2xl font-bold text-gray-800 mb-6">
         Live Driver Tracking - Bangalore
       </h1>
@@ -247,6 +249,7 @@ const LiveTracking = () => {
         </div>
       </div>
     </div>
+    </Layout>
   );
 };
 

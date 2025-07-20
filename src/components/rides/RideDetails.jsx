@@ -14,6 +14,7 @@ import {
   Package,
 } from "lucide-react";
 import RideStatusBadge from "../common/RideStatusBadge";
+import Layout from "../common/Layout";
 
 const RideDetails = ({ rideId, onClose }) => {
   // Mock data - in a real app this would come from an API
@@ -74,7 +75,8 @@ const RideDetails = ({ rideId, onClose }) => {
 
 
   return (
-    <div className="container mx-auto px-4 py-6">
+  <Layout>
+      <div className="container mx-auto px-4 py-6">
       <div className="card">
         <div className="p-6">
           {/* Header */}
@@ -289,6 +291,7 @@ const RideDetails = ({ rideId, onClose }) => {
         </div>
       </div>
     </div>
+  </Layout>
   );
 };
 

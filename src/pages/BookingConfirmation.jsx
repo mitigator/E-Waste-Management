@@ -15,6 +15,7 @@ const BookingConfirmation = () => {
     date: '2023-06-20',
     time: '10:00 AM'
   };
+  
 
   return (
     <div className="container mx-auto px-4 py-6 max-w-md">

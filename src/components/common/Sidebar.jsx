@@ -29,7 +29,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     {
       name: "Dashboard",
       icon: LayoutDashboard,
-      path: "/",
+      path: "/admin",
     },
     {
       name: "Bookings",
@@ -37,8 +37,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       path: "/bookings",
       subItems: [
         { name: "All Bookings", path: "/bookings" },
-        { name: "New Booking", path: "/bookings/new" },
-        { name: "Calendar", path: "/bookings/calendar" },
+        { name: "New Booking", path: "/bookings" },
+        { name: "Calendar", path: "/bookings" },
       ],
     },
     {
@@ -47,7 +47,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       path: "/drivers",
       subItems: [
         { name: "All Drivers", path: "/drivers" },
-        { name: "Add Driver", path: "/drivers/new" },
+        { name: "Add Driver", path: "/drivers" },
         { name: "Live Tracking", path: "/drivers/tracking" },
       ],
     },

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Truck, Plus, Search, Filter } from "lucide-react";
 import RideCard from "../components/rides/RideCard";
 import EmptyState from "../components/common/EmptyState";
+import Layout from "../components/common/Layout";
 
 const Rides = () => {
   const [filter, setFilter] = useState("all");
@@ -71,7 +72,8 @@ const Rides = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-6">
+    <Layout>
+      <div className="container mx-auto px-4 py-6">
       <h1 className="text-2xl font-bold text-gray-800 mb-6">
         Rides Management
       </h1>
@@ -123,6 +125,7 @@ const Rides = () => {
         />
       )}
     </div>
+    </Layout>
   );
 };
 

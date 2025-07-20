@@ -13,6 +13,8 @@ const BookPickup = () => {
     wasteType: 'electronics'
   });
 
+  
+
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const handleChange = (e) => {
@@ -35,7 +37,7 @@ const BookPickup = () => {
   return (
     <div className="container mx-auto px-4 py-6 max-w-md">
       <div className="flex items-center mb-6">
-        <Link to="/" className="mr-4">
+        <Link to="/user" className="mr-4">
           <ArrowLeft className="h-5 w-5" />
         </Link>
         <h1 className="text-xl font-bold">Schedule Pickup</h1>
