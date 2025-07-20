@@ -41,7 +41,7 @@ const Home = () => {
     },
     {
       title: "Total Revenue",
-      value: "$8,742",
+      value: "₹752,907",
       change: "+18%",
       trend: "up",
       icon: <DollarSign className="h-5 w-5 text-purple-500" />,
@@ -49,66 +49,67 @@ const Home = () => {
   ];
 
   const activities = [
-    {
-      id: 1,
-      driver: "John Doe",
-      action: "Picked up e-waste",
-      time: "2 mins ago",
-      status: "completed",
-    },
-    {
-      id: 2,
-      driver: "Sarah Smith",
-      action: "New booking assigned",
-      time: "10 mins ago",
-      status: "pending",
-    },
-    {
-      id: 3,
-      driver: "Mike Johnson",
-      action: "Completed ride",
-      time: "25 mins ago",
-      status: "completed",
-    },
-    {
-      id: 4,
-      driver: "Emma Wilson",
-      action: "Started ride",
-      time: "1 hour ago",
-      status: "in-progress",
-    },
-  ];
+  {
+    id: 1,
+    driver: "Arun Kumar",
+    action: "Picked up e-waste",
+    time: "2 mins ago",
+    status: "completed",
+  },
+  {
+    id: 2,
+    driver: "Divya Ramesh",
+    action: "New booking assigned",
+    time: "10 mins ago",
+    status: "pending",
+  },
+  {
+    id: 3,
+    driver: "Praveen Nair",
+    action: "Completed ride",
+    time: "25 mins ago",
+    status: "completed",
+  },
+  {
+    id: 4,
+    driver: "Meera Subramanian",
+    action: "Started ride",
+    time: "1 hour ago",
+    status: "in-progress",
+  },
+];
 
   const recentBookings = [
-    {
-      id: "BK-001",
-      customer: "John Smith",
-      pickup: "123 Main St",
-      scheduled: "Today, 10:00 AM",
-      status: "pending",
-    },
-    {
-      id: "BK-002",
-      customer: "Sarah Johnson",
-      pickup: "456 Oak Ave",
-      scheduled: "Today, 2:30 PM",
-      status: "assigned",
-    },
-    {
-      id: "BK-003",
-      customer: "Mike Williams",
-      pickup: "789 Pine Rd",
-      scheduled: "Tomorrow, 9:00 AM",
-      status: "pending",
-    },
-    {
-      id: "BK-004",
-      customer: "Emma Brown",
-      pickup: "321 Elm St",
-      scheduled: "Tomorrow, 11:45 AM",
-      status: "completed",
-    },
-  ];
+  {
+    id: "BK-001",
+    customer: "Ravi Kumar",
+    pickup: "12, MG Road, Bengaluru",
+    scheduled: "Today, 10:00 AM",
+    status: "pending",
+  },
+  {
+    id: "BK-002",
+    customer: "Anjali Menon",
+    pickup: "45, Indiranagar 100 Feet Rd, Bengaluru",
+    scheduled: "Today, 2:30 PM",
+    status: "assigned",
+  },
+  {
+    id: "BK-003",
+    customer: "Sandeep Reddy",
+    pickup: "78, Jayanagar 4th Block, Bengaluru",
+    scheduled: "Tomorrow, 9:00 AM",
+    status: "pending",
+  },
+  {
+    id: "BK-004",
+    customer: "Lakshmi Nair",
+    pickup: "21, Koramangala 5th Block, Bengaluru",
+    scheduled: "Tomorrow, 11:45 AM",
+    status: "completed",
+  },
+];
+
 
   const earningsData = [
     { name: "Jan", earnings: 4000 },

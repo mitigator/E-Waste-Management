@@ -37,43 +37,44 @@ const DashboardOverview = () => {
     },
     {
       title: "Total Revenue",
-      value: "$8,742",
+      value: "₹752,907",
       change: "+18%",
       trend: "up",
       icon: <DollarSign className="h-5 w-5 text-purple-500" />,
     },
   ];
 
-  const activities = [
-    {
-      id: 1,
-      driver: "John Doe",
-      action: "Picked up e-waste",
-      time: "2 mins ago",
-      status: "completed",
-    },
-    {
-      id: 2,
-      driver: "Sarah Smith",
-      action: "New booking assigned",
-      time: "10 mins ago",
-      status: "pending",
-    },
-    {
-      id: 3,
-      driver: "Mike Johnson",
-      action: "Completed ride",
-      time: "25 mins ago",
-      status: "completed",
-    },
-    {
-      id: 4,
-      driver: "Emma Wilson",
-      action: "Started ride",
-      time: "1 hour ago",
-      status: "in-progress",
-    },
-  ];
+ const activities = [
+  {
+    id: 1,
+    driver: "Arun Kumar",
+    action: "Picked up e-waste",
+    time: "2 mins ago",
+    status: "completed",
+  },
+  {
+    id: 2,
+    driver: "Divya Ramesh",
+    action: "New booking assigned",
+    time: "10 mins ago",
+    status: "pending",
+  },
+  {
+    id: 3,
+    driver: "Praveen Nair",
+    action: "Completed ride",
+    time: "25 mins ago",
+    status: "completed",
+  },
+  {
+    id: 4,
+    driver: "Meera Subramanian",
+    action: "Started ride",
+    time: "1 hour ago",
+    status: "in-progress",
+  },
+];
+
 
   const earningsData = [
     { name: "Jan", earnings: 4000 },

@@ -9,12 +9,13 @@ const EarningsSummary = () => {
 
   // Mock data
   const summaryData = {
-    totalEarnings: "$12,345",
-    completedRides: 89,
-    driverEarnings: "$9,876",
-    platformEarnings: "$2,469",
-    comparison: "+18% from last month",
-  };
+  totalEarnings: "₹10,20,000",
+  completedRides: 89,
+  driverEarnings: "₹8,16,000",
+  platformEarnings: "₹2,04,000",
+  comparison: "+18% from last month",
+};
+
 
   const months = [
     "January",

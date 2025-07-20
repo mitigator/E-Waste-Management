@@ -18,48 +18,65 @@ L.Icon.Default.mergeOptions({
 
 const LiveTracking = () => {
   const [activeDriver, setActiveDriver] = useState(null);
-  const [driverPosition, setDriverPosition] = useState([51.505, -0.09]); // Default position (London)
+  const [driverPosition, setDriverPosition] = useState([12.8875, 77.6164]); // Default position (Arekere, Bangalore)
   const [zoom] = useState(13);
 
-  // Mock data for active rides
+  // Mock data for active rides with South Indian names and Arekere locations
   const activeRides = [
     {
       id: "RD-001",
       driver: {
         id: "DR-001",
-        name: "Michael Johnson",
-        phone: "+1 (555) 123-4567",
+        name: "Arjun Reddy",
+        phone: "+91 98765 43210",
       },
       booking: {
         id: "BK-001",
-        customer: "John Smith",
-        pickupAddress: "123 Main St, City",
-        dropAddress: "E-Waste Facility A",
+        customer: "Karthik Sharma",
+        pickupAddress: "45, Bannerghatta Main Road, Arekere",
+        dropAddress: "E-Waste Facility, Bommanahalli",
       },
       status: "in-progress",
-      position: [51.505, -0.09],
+      position: [12.8875, 77.6164], // Arekere
       lastUpdated: "2 minutes ago",
     },
     {
       id: "RD-002",
       driver: {
         id: "DR-002",
-        name: "Sarah Williams",
-        phone: "+1 (555) 234-5678",
+        name: "Priya Iyer",
+        phone: "+91 87654 32109",
       },
       booking: {
         id: "BK-002",
-        customer: "Sarah Johnson",
-        pickupAddress: "456 Oak Ave, Town",
-        dropAddress: "E-Waste Facility B",
+        customer: "Meenakshi Sundaram",
+        pickupAddress: "78, Hulimangala Road, Arekere",
+        dropAddress: "E-Waste Facility, Electronic City",
       },
       status: "in-progress",
-      position: [51.51, -0.1],
+      position: [12.8885, 77.6154], // Near Arekere
       lastUpdated: "5 minutes ago",
+    },
+    {
+      id: "RD-003",
+      driver: {
+        id: "DR-003",
+        name: "Suresh Kumar",
+        phone: "+91 76543 21098",
+      },
+      booking: {
+        id: "BK-003",
+        customer: "Lakshmi Narayan",
+        pickupAddress: "22, Arekere Gate, Bannerghatta Road",
+        dropAddress: "E-Waste Facility, HSR Layout",
+      },
+      status: "in-progress",
+      position: [12.8865, 77.6174], // Near Arekere
+      lastUpdated: "7 minutes ago",
     },
   ];
 
-  // Simulate driver movement
+  // Simulate driver movement around Arekere
   useEffect(() => {
     if (!activeDriver) return;
 
@@ -81,7 +98,7 @@ const LiveTracking = () => {
   return (
     <div className="container mx-auto px-4 py-6">
       <h1 className="text-2xl font-bold text-gray-800 mb-6">
-        Live Driver Tracking
+        Live Driver Tracking - Bangalore
       </h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -207,6 +224,9 @@ const LiveTracking = () => {
                         <p className="font-medium">
                           Lat: {driverPosition[0].toFixed(6)}, Lng:{" "}
                           {driverPosition[1].toFixed(6)}
+                        </p>
+                        <p className="text-xs text-gray-500 mt-1">
+                          Near Arekere, Bangalore
                         </p>
                       </div>
                     </div>

@@ -18,59 +18,60 @@ import RideStatusBadge from "../common/RideStatusBadge";
 const RideDetails = ({ rideId, onClose }) => {
   // Mock data - in a real app this would come from an API
   const ride = {
-    id: rideId || "RD-001",
-    bookingId: "BK-001",
-    driver: {
-      id: "DR-001",
-      name: "Michael Johnson",
-      phone: "+1 (555) 123-4567",
-      vehicleType: "Pickup Truck",
-      vehicleNumber: "ABC123",
+  id: rideId || "RD-001",
+  bookingId: "BK-001",
+  driver: {
+    id: "DR-001",
+    name: "Arun Prakash",
+    phone: "+91 98450 12345",
+    vehicleType: "Pickup Truck",
+    vehicleNumber: "KA01 AB 1234",
+  },
+  customer: {
+    name: "Ravi Kumar",
+    phone: "+91 98765 43210",
+    email: "ravi.kumar@example.in",
+  },
+  pickupAddress: "12, MG Road, Bengaluru, Karnataka 560001",
+  dropAddress: "E-Waste Facility A, Peenya Industrial Area, Bengaluru",
+  startTime: "2023-06-15 10:15 AM",
+  endTime: "2023-06-15 11:30 AM",
+  duration: "1 hour 15 minutes",
+  distance: "8.5 km",
+  fare: "₹3,750.00",
+  status: "completed",
+  ewasteDetails: [
+    {
+      type: "Electronics",
+      weight: "10 kg",
+      items: ["2 Laptops", "3 Mobile Phones"],
     },
-    customer: {
-      name: "John Smith",
-      phone: "+1 (555) 987-6543",
-      email: "john.smith@example.com",
+    {
+      type: "Batteries",
+      weight: "5 kg",
+      items: ["4 Laptop Batteries", "3 Phone Batteries"],
     },
-    pickupAddress: "123 Main St, City, State 12345",
-    dropAddress: "E-Waste Facility A, 456 Industrial Park, City",
-    startTime: "2023-06-15 10:15 AM",
-    endTime: "2023-06-15 11:30 AM",
-    duration: "1 hour 15 minutes",
-    distance: "8.5 km",
-    fare: "$45.00",
-    status: "completed",
-    ewasteDetails: [
-      {
-        type: "Electronics",
-        weight: "10 kg",
-        items: ["2 Laptops", "3 Mobile Phones"],
-      },
-      {
-        type: "Batteries",
-        weight: "5 kg",
-        items: ["4 Laptop Batteries", "3 Phone Batteries"],
-      },
-    ],
-    specialInstructions: "Please ring doorbell twice. Items are in garage.",
-    route: [
-      {
-        time: "10:15 AM",
-        location: "Picked up from customer",
-        notes: "All items loaded",
-      },
-      {
-        time: "10:45 AM",
-        location: "In transit",
-        notes: "On route to facility",
-      },
-      {
-        time: "11:30 AM",
-        location: "Arrived at facility",
-        notes: "Items unloaded and processed",
-      },
-    ],
-  };
+  ],
+  specialInstructions: "Please ring the bell twice. Items are in the veranda.",
+  route: [
+    {
+      time: "10:15 AM",
+      location: "Picked up from customer",
+      notes: "All items loaded",
+    },
+    {
+      time: "10:45 AM",
+      location: "In transit",
+      notes: "On route to facility",
+    },
+    {
+      time: "11:30 AM",
+      location: "Arrived at facility",
+      notes: "Items unloaded and processed",
+    },
+  ],
+};
+
 
   return (
     <div className="container mx-auto px-4 py-6">

@@ -7,14 +7,14 @@ const Earnings = () => {
   const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth());
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
 
-  // Mock data
   const summaryData = {
-    totalEarnings: "$12,345",
+    totalEarnings: "₹10,20,000",
     completedRides: 89,
-    driverEarnings: "$9,876",
-    platformEarnings: "$2,469",
+    driverEarnings: "₹8,16,000",
+    platformEarnings: "₹2,04,000",
     comparison: "+18% from last month",
   };
+
 
   const months = [
     "January",
@@ -214,19 +214,20 @@ const Earnings = () => {
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                       {
                         [
-                          "Michael Johnson",
-                          "Sarah Williams",
-                          "David Brown",
-                          "Emma Davis",
-                          "Robert Wilson",
+                          "Arun Prakash",
+                          "Divya Ramesh",
+                          "Suresh Nair",
+                          "Meera Subramanian",
+                          "Raghav Iyer",
                         ][item - 1]
                       }
                     </td>
+
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       RD-00{item}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                      ${45 + item * 5}
+                      ₹{45 + item * 80}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">

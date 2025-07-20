@@ -19,30 +19,31 @@ import Modal from "../common/Modal";
 
 const BookingDetails = ({ bookingId, onClose }) => {
   // Mock data - in a real app this would come from an API
-  const booking = {
-    id: bookingId || "BK-001",
-    customer: "John Smith",
-    customerPhone: "+1 (555) 123-4567",
-    customerEmail: "john.smith@example.com",
-    pickupAddress: "123 Main St, City, State 12345",
-    dropAddress: "E-Waste Facility A, 456 Industrial Park, City",
-    scheduledDate: "2023-06-15",
-    scheduledTime: "10:00 AM",
-    status: "pending",
-    ewasteType: "Electronics",
-    ewasteItems: [
-      "2 Laptops",
-      "3 Mobile Phones",
-      "1 Tablet",
-      "5 Cables & Chargers",
-    ],
-    estimatedWeight: "15 kg",
-    specialInstructions: "Please ring doorbell twice. Items are in garage.",
-    driver: null,
-    fare: "$45.00",
-    createdAt: "2023-06-10 09:30 AM",
-    updatedAt: "2023-06-10 09:30 AM",
-  };
+ const booking = {
+  id: bookingId || "BK-001",
+  customer: "Ramesh Iyer",
+  customerPhone: "+91 98765 43210",
+  customerEmail: "ramesh.iyer@example.in",
+  pickupAddress: "12, MG Road, Bengaluru, Karnataka 560001",
+  dropAddress: "E-Waste Facility A, 45 Industrial Layout, Peenya, Bengaluru",
+  scheduledDate: "2023-06-15",
+  scheduledTime: "10:00 AM",
+  status: "pending",
+  ewasteType: "Electronics",
+  ewasteItems: [
+    "2 Laptops",
+    "3 Mobile Phones",
+    "1 Tablet",
+    "5 Cables & Chargers",
+  ],
+  estimatedWeight: "15 kg",
+  specialInstructions: "Please ring the bell twice. Items are in the front veranda.",
+  driver: null,
+  fare: "₹3,750.00",
+  createdAt: "2023-06-10 09:30 AM",
+  updatedAt: "2023-06-10 09:30 AM",
+};
+
 
   const [showAssignDriverModal, setShowAssignDriverModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
